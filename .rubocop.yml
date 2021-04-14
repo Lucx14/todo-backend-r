@@ -1,0 +1,43 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "bin/*"
+    - "config/**/*"
+    - "lib/tasks/**/*"
+    - "Gemfile"
+    - "config.ru"
+    - "Rakefile"
+    - "spec/rails_helper.rb"
+    - "spec/spec_helper.rb"
+    - "spec/support/database_cleaner.rb"
+    - "vendor/bundle/**/*"
+    - "coverage/*"
+
+  TargetRubyVersion: 3.0.1
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "Rakefile"
+    - "**/*.rake"
+    - "spec/**/*.rb"
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/ExampleLength:
+  Max: 7
